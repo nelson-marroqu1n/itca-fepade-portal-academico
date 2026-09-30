@@ -41,13 +41,3 @@ Para servirlo localmente puedes usar la extensión **Live Server** de Visual Stu
 ```
 
 El proyecto contiene otras páginas HTML para carreras, programas y sedes, además de una guía estudiantil en PDF.
-
-## Publicación
-
-Se puede publicar como sitio estático en GitHub Pages. Para que GitHub Pages encuentre la portada automáticamente, conviene renombrar `Inicio.html` a `index.html` y actualizar los enlaces internos que actualmente apuntan a `Inicio.html`.
-
-## Nombre sugerido para el repositorio
-
-`itca-fepade-portal-academico`
-
-El nombre describe el contenido y usa minúsculas y guiones, un formato práctico para una URL de GitHub.
