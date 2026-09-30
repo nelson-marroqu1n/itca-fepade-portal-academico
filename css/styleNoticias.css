@@ -1,0 +1,415 @@
+/*Dimensiones recomendadas para los diferentes navegadores*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*Diseño para la parte de arriba del header o menú*/
+.top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background: goldenrod;
+}
+
+.top-bar span{
+    color: #fff;
+}
+
+.top-bar ul{
+    list-style: none;
+    display: flex;  
+}
+
+.top-bar li{
+    margin: 0px 5px;
+}
+
+.top-bar a{
+    color: #fff;
+}
+
+.top-bar a:hover{
+    color: #005eb8;
+    transition: 0.5s;
+}
+
+/*Diseño del header o menú*/
+header {
+    background-color: #005eb8;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+}
+
+.containerMenu{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.back{
+    padding: 32px 0;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo{
+    height: 40px;
+    width: auto;
+    max-width: 100%;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 23px;
+    color: white;
+    display: block;
+}
+
+.menu .navbar ul li a:hover{
+    color: goldenrod;
+    transition: 0.5s;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:991px){
+
+    .menu{
+        padding: 30px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .back{
+        padding: 50px 0;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #005eb8;
+        display: none;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+}
+
+.contenedorNews {
+    position: relative; 
+    margin: 0;
+    padding: 0;
+    border: 5px solid goldenrod;
+    border-radius: 5px;
+    border-style: ridge;
+}
+
+.news {
+    min-width: 100%; 
+    height: auto; 
+    display: block;
+    filter: brightness(70%);
+    animation: fadeIn 2s ease; /*Esta es una pequeña animación que le agregué, se llama: "fadeIn"*/
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /*Con esto le estoy indicando que empiece con una opacidas de 0*/
+    }
+    to {
+        opacity: 1; /*Y aquí que termine con una opacidad de 1*/
+    }
+}
+
+@media only screen and (min-width:20px) and (max-width:1200px){
+    .contenedorNews{
+        width: 100%;
+        height: auto; 
+        display: block;
+    }
+
+    .titulo h3{
+        font-size: 4vw;
+        width: auto;
+        height: auto; 
+        display: block;
+    }
+
+    .news{
+        width: 100%;
+        height: auto; 
+        display: block;
+    }
+}
+
+.titulo {
+    position: absolute;
+    top: 50%;
+    left: 10%; 
+    background-color: rgba(10, 10, 10, 0.7);
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 38px;
+    text-align: left;
+}
+
+
+/*Segunda sección de la página y diseño para las tarjetas con los vídeos*/
+.sectionNoticias1{
+    background-color: whitesmoke;
+    margin-top: 20px;
+}
+
+.sectionNoticias2{
+    background-color: whitesmoke;
+    margin-top: 20px;
+}
+
+.sectionNoticias3{
+    background-color: whitesmoke;
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+.container-card{
+	width: 100%;
+	display: flex;
+	max-width: 1100px;
+	margin: auto;
+}
+
+.card{
+	width: 100%;
+	margin: 15px;
+	border-radius: 6px;
+	overflow: hidden;
+	background:#fff;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+.card:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+    border: 5px solid goldenrod;
+    transition: 0.5s;
+    border-radius: 5px;
+    border-style: ridge;
+}
+.card img{
+	width: 100%;
+	height: 210px;
+}
+.card .contenido-card{
+	padding: 15px;
+	text-align: center;
+}
+.card .contenido-card h3{
+	margin-bottom: 15px;
+	color: #7a7a7a;
+}
+.card .contenido-card p{
+	line-height: 1.8;
+    text-align: justify;
+	color: #6a6a6a;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.card .contenido-card a{
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #005eb8;
+	border: 1px solid #005eb8;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+.card .contenido-card a:hover{
+	background: #005eb8;
+    transition: 1.5s;
+	color: #fff;
+}
+/*Diseño responsive para las tarjetas*/
+@media only screen and (min-width:20px) and (max-width:790px){
+	.container-card{
+		flex-wrap: wrap;
+	}
+	.card{
+		margin: 15px;
+	}
+}
+  
+/*Diseño para los íconos de las redes sociales*/
+.social-media ul{
+    list-style: none;
+    display: flex;  
+    justify-content: center;
+}
+
+.social-media li{
+    margin: 0px 5px;
+}
+
+.social-media a{
+    color: #fff;
+}
+
+.social-media {
+    margin-top: 10px;  
+}
+
+.social-media a {
+    margin: 0;
+    color: white;
+}
+
+.social-media a:hover{
+    color: goldenrod;
+    transition: 0.5s;
+}
+
+/*Diseño de footer o pie de página*/
+.footer {
+    border: 5px solid goldenrod;
+    border-radius: 5px;
+    border-style: ridge;
+    background-color: #005eb8;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: 40px;
+}
+
+.footer-col {
+    width: 20%;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px;
+}
+
+.fred {
+    width: 40px;
+    height: 2px;
+    background-color: #fff;
+    margin: 15px auto;
+}
+
+.content ul {
+    padding: 0;
+    margin: 0;
+}
+
+.content ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+    color: #fff;
+}
+
+.text-decoration-none:hover {
+    color: goldenrod;
+    transition: 0.5s;
+}
+
+
+/*Diseño debajo del footer*/
+
+.finalSection1{
+    background-color: white;
+}
+
+.finalSection2{
+    background-color: whitesmoke;
+}
+
+.container-img {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container-img img {
+    display: block; 
+    margin: 0 auto;
+    max-width: 100%;
+    width: 400px;
+}
+
+.container-text {
+    text-align: center;
+    color: #6a6a6a;
+}
+
+.container-text div a{
+    color: #6a6a6a;
+}
+
+.container-text div a:hover{
+    color: goldenrod;
+    transition: 1.5s;
+}
+
+.container-text div {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 10px;
+}
+
+/*Diseño responsive para el contenido del pie de página (columnas del contenido)*/
+@media (max-width: 991px) {
+    .footer-col {
+        width: 100%; 
+        float: none; 
+        margin-bottom: 20px;
+    }
+/*Con esto estoy indicando que al acoplarse a diseños de pantalla más pequeños, solo se muestre una columna; 
+en este caso sería solo la de "Acerca"*/
+    .footer-col:not(:nth-child(1)) {
+        display: none;
+    }
+}

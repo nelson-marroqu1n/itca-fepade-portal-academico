@@ -1,0 +1,488 @@
+/*Dimensiones recomendadas para los diferentes navegadores*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*Diseño para la parte de arriba del header o menú*/
+.top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background: goldenrod;
+}
+
+.top-bar span{
+    color: #fff;
+}
+
+.top-bar ul{
+    list-style: none;
+    display: flex;  
+}
+
+.top-bar li{
+    margin: 0px 5px;
+}
+
+.top-bar a{
+    color: #fff;
+}
+
+.top-bar a:hover{
+    color: #005eb8;
+    transition: 0.5s;
+}
+
+/*Diseño del header o menú*/
+header {
+    background-color: #005eb8;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+}
+
+.containerMenu{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.back{
+    padding: 32px 0;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo{
+    height: 40px;
+    width: auto;
+    max-width: 100%;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 23px;
+    color: white;
+    display: block;
+}
+
+.menu .navbar ul li a:hover{
+    color: goldenrod;
+    transition: 0.5s;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:991px){
+
+    .menu{
+        padding: 30px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .back{
+        padding: 50px 0;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #005eb8;
+        display: none;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+}
+
+/*Diseño de la imagen principal*/
+.slider{
+    width: 100%;
+    margin: auto;
+    height: 300px;
+    position: relative; 
+    margin: 0;
+    padding: 0;
+    border: 5px solid goldenrod;
+    border-radius: 5px;
+    border-style: ridge;
+}
+
+.slider img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(40%);
+    animation: fadeIn 2s ease; /*Esta es una pequeña animación que le agregué, se llama: "fadeIn"*/
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /*Con esto le estoy indicando que empiece con una opacidas de 0*/
+    }
+    to {
+        opacity: 1; /*Y aquí que termine con una opacidad de 1*/
+    }
+}
+
+@media only screen and (min-width:20px) and (max-width:1200px){
+    .slider{
+        width: 100%;
+        height: auto; 
+        display: block;
+    }
+
+    .titulo h3{
+        font-size: 4vw;
+        width: auto;
+        height: auto; 
+        display: block;
+    }
+
+    .imgCursos{
+        width: 100%;
+        height: auto; 
+        display: block;
+    }
+}
+
+.titulo {
+    position: absolute;
+    top: 50%;
+    left: 14.5%;
+    background-color: rgba(10, 10, 10, 0.7);
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.listado-titulo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.listado-titulo2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-left: 30px;
+}
+
+.icono img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.text2 {
+    font-weight: bold;
+}
+
+.areas4 {
+    margin-bottom: 20px;
+}
+
+.item {
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin-bottom: 5px;
+}
+
+.item:hover {
+    background-color: #ccc;
+}
+
+
+.linea {
+    height: 2px;
+    background-color: #000;
+    margin-top: 20px;
+}
+
+.section1{
+    background-color: white;
+}
+  
+.carrerasBotones {
+	width: 100%; 
+	max-width: 1200px; 
+	margin: auto;
+	padding: 50px 0; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.carrerasBotones h1{
+	font-size: 1.5vw; 
+	font-weight: 10px;
+	text-align: center;
+	margin-bottom: 0.5vw; 
+	text-transform: uppercase;
+	color: #6a6a6a;
+	padding: 5px 10px;
+	display: inline-block;
+}
+
+.carrerasBotones p{
+    font-size: 1.5vw; 
+	font-weight: 5px;
+	text-align: center;
+	margin-bottom: 1vw; 
+	color: #6a6a6a;
+	padding: 5px 10px;
+	display: inline-block;
+}
+
+.explorarCarreras {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 1.5vw; 
+}
+
+.boton {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: auto; 
+	background: #005eb8;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2vw; 
+	font-weight: 500;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: .3s ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+    padding: 15px;
+}
+
+.boton a{
+    color: white;
+}
+
+.boton a:hover{
+    color: white;
+    outline: none;
+}
+
+.boton span {
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+}
+
+.boton::after {
+	content: "";
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: calc(-100% - 4vw); 
+	border-bottom: 120px solid goldenrod;
+	border-right: 40px solid transparent; 
+	transition: .4s ease-in-out all;
+}
+
+.boton:hover::after {
+	left: 0;
+}
+
+@media screen and (min-width: 20px) and (max-width: 560px) {
+    .carrerasBotones h1{
+      font-size: 3.5vw;
+      margin-bottom: 1.5vw;
+    }
+  
+    .carrerasBotones p{
+      font-size: 5vw;
+      margin-bottom: 3vw;
+    }
+  
+    .boton {
+      height: 30px;
+      font-size: 2.5vw; 
+    }
+    .boton::after {
+      border-bottom: 30px solid goldenrod; 
+      border-right: 30px solid transparent; 
+      transition: .4s ease-in-out all;
+    }
+  }
+
+/*Diseño para los íconos de las redes sociales*/
+.social-media ul{
+    list-style: none;
+    display: flex;  
+    justify-content: center;
+}
+
+.social-media li{
+    margin: 0px 5px;
+}
+
+.social-media a{
+    color: #fff;
+}
+
+.social-media {
+    margin-top: 10px;  
+}
+
+.social-media a {
+    margin: 0;
+    color: white;
+}
+
+.social-media a:hover{
+    color: goldenrod;
+    transition: 0.5s;
+}
+
+/*Diseño de footer o pie de página*/
+.footer {
+    background-color: #005eb8;
+    border: 5px solid goldenrod;
+    border-radius: 5px;
+    border-style: ridge;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.footer-col {
+    width: 20%;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px;
+}
+
+.fred {
+    width: 40px;
+    height: 2px;
+    background-color: #fff;
+    margin: 15px auto;
+}
+
+.content ul {
+    padding: 0;
+    margin: 0;
+}
+
+.content ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+    color: #fff;
+}
+
+.text-decoration-none:hover {
+    color: goldenrod;
+    transition: 0.5s;
+}
+
+
+/*Diseño debajo del footer*/
+
+.container-img {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container-img img {
+    display: block; 
+    margin: 0 auto;
+    max-width: 100%;
+    width: 400px;
+}
+
+.container-text {
+    text-align: center;
+    color: #6a6a6a;
+}
+
+.container-text div a{
+    color: #6a6a6a;
+}
+
+.container-text div a:hover{
+    color: goldenrod;
+    transition: 1.5s;
+}
+
+.container-text div {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 5px;
+}
+
+/*Diseño responsive para el contenido del pie de página (columnas del contenido)*/
+@media (max-width: 991px) {
+    .footer-col {
+        width: 100%; 
+        float: none; 
+        margin-bottom: 20px;
+    }
+/*Con esto estoy indicando que al acoplarse a diseños de pantalla más pequeños, solo se muestre una columna; 
+en este caso sería solo la de "Acerca"*/
+    .footer-col:not(:nth-child(1)) {
+        display: none;
+    }
+}
